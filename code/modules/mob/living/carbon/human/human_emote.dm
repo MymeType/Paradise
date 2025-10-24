@@ -538,7 +538,8 @@
 		/datum/species/unathi,
 		/datum/species/vulpkanin,
 		/datum/species/tajaran,
-		/datum/species/vox
+		/datum/species/vox,
+		/datum/species/skrell
 	)
 
 /datum/emote/living/carbon/human/proc/can_wag(mob/user)
