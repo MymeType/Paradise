@@ -23,15 +23,26 @@
 	desc = "A white plasmaman envirosuit designed for culinary practices. One might question why a member of a species that doesn't need to eat would become a chef."
 	icon_state = "chef_envirosuit"
 
+/obj/item/clothing/under/plasmaman/chef/bw
+	icon_state = "chef_envirosuit_bw"
+
 /obj/item/clothing/under/plasmaman/enviroslacks
 	name = "enviroslacks"
 	desc = "The pet project of a particularly posh plasmaman, this custom suit was quickly appropriated by Nanotrasen for its detectives, internal affairs agents, and bartenders alike."
 	icon_state = "enviroslacks"
 
 /obj/item/clothing/under/plasmaman/chaplain
-	name = "chaplain's plasma envirosuit"
+	name = "chaplain's black plasma envirosuit"
 	desc = "An envirosuit specially designed for only the most pious of plasmamen."
-	icon_state = "chap_envirosuit"
+	icon_state = "chapbw_envirosuit"
+
+/obj/item/clothing/under/plasmaman/chaplain/green
+	name = "chaplain's white plasma envirosuit"
+	icon_state = "chapwg_envirosuit"
+
+/obj/item/clothing/under/plasmaman/chaplain/blue
+	name = "chaplain's blue plasma envirosuit"
+	icon_state = "chapco_envirosuit"
 
 /obj/item/clothing/under/plasmaman/librarian
 	name = "librarian's plasma envirosuit"
@@ -73,7 +84,7 @@
 				return
 			next_extinguish = world.time + extinguish_cooldown
 			extinguishes_left--
-			H.visible_message("<span class='warning'>[H]'s suit spews out a tonne of space lube!</span>", "<span class='warning'>Your suit spews out a tonne of space lube!</span>")
+			H.visible_message(SPAN_WARNING("[H]'s suit spews out a tonne of space lube!"), SPAN_WARNING("Your suit spews out a tonne of space lube!"))
 			H.ExtinguishMob()
 			new /obj/effect/particle_effect/foam(loc) //Truely terrifying.
 	return FALSE
